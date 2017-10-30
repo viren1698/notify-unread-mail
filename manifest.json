@@ -1,0 +1,42 @@
+{
+    "manifest_version" : 2,
+    "name" : "Check Mail",
+    "version" : "0.1",
+
+    // "default_locale" : "en",
+    "description" : "Shows notifications for new unread mail in Trodly Mail and unread badges.",
+    "icons" : {
+        "16" : "./icons/email16.png",
+        "32" : "./icons/email32.png",
+        "64" : "./icons/email64.png",
+        "128": "./icons/email128.png",
+        "256": "./icons/email256.png",
+        "512": "./icons/email512.png"
+    },
+
+    "browser_action": {
+        "default_icon": {
+          "16" : "./icons/email16.png",
+          "32" : "./icons/email32.png",
+          "64" : "./icons/email64.png",
+          "128": "./icons/email128.png",
+          "256": "./icons/email256.png",
+          "512": "./icons/email512.png"
+      },           // optional
+        "default_title": "Check Mail"    // optional; shown in tooltip
+        // "default_popup": "popup.html"        // optional
+      },
+
+      "author" : "M.A.K.",
+      "background": {
+        "scripts": ["jquery-3.2.1.min.js","loadMail.js"],
+        "persistent": false
+      },
+
+      "permissions" : [
+        "notifications",
+        "storage",
+        "https://mail.zoho.com/zm/#mail/views/unread",
+        "tabs"
+      ]
+}
